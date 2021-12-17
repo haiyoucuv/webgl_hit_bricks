@@ -47,10 +47,10 @@
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
 
-"@rollup/plugin-node-resolve@^13.0.5":
-  version "13.0.5"
-  resolved "http://npm.dui88.com:80/@rollup%2fplugin-node-resolve/-/plugin-node-resolve-13.0.5.tgz#016abe58796a4ff544d6beac7818921e3d3777fc"
-  integrity sha1-AWq+WHlqT/VE1r6seBiSHj03d/w=
+"@rollup/plugin-node-resolve@^13.1.1":
+  version "13.1.1"
+  resolved "http://npm.dui88.com:80/@rollup%2fplugin-node-resolve/-/plugin-node-resolve-13.1.1.tgz#d38ba06e7b181ab4df64c75409b43d9bdc95ae34"
+  integrity sha512-6QKtRevXLrmEig9UiMYt2fSvee9TyltGRfw+qSs6xjUnxwjOzTOqy+/Lpxsgjb8mJn1EQNbCDAvt89O4uzL5kw==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     "@types/resolve" "1.17.1"
@@ -59,10 +59,10 @@
     is-module "^1.0.0"
     resolve "^1.19.0"
 
-"@rollup/plugin-typescript@^8.2.5":
-  version "8.2.5"
-  resolved "http://npm.dui88.com:80/@rollup%2fplugin-typescript/-/plugin-typescript-8.2.5.tgz#e0319761b2b5105615e5a0c371ae05bc2984b7de"
-  integrity sha1-4DGXYbK1EFYV5aDDca4FvCmEt94=
+"@rollup/plugin-typescript@^8.3.0":
+  version "8.3.0"
+  resolved "http://npm.dui88.com:80/@rollup%2fplugin-typescript/-/plugin-typescript-8.3.0.tgz#bc1077fa5897b980fc27e376c4e377882c63e68b"
+  integrity sha1-vBB3+liXuYD8J+N2xON3iCxj5os=
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     resolve "^1.17.0"
@@ -914,10 +914,10 @@ rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.58.0:
-  version "2.58.0"
-  resolved "http://npm.dui88.com:80/rollup/-/rollup-2.58.0.tgz#a643983365e7bf7f5b7c62a8331b983b7c4c67fb"
-  integrity sha1-pkOYM2Xnv39bfGKoMxuYO3xMZ/s=
+rollup@^2.61.1:
+  version "2.61.1"
+  resolved "http://npm.dui88.com:80/rollup/-/rollup-2.61.1.tgz#1a5491f84543cf9e4caf6c61222d9a3f8f2ba454"
+  integrity sha512-BbTXlEvB8d+XFbK/7E5doIcRtxWPRiqr0eb5vQ0+2paMM04Ye4PZY5nHOQef2ix24l/L0SpLd5hwcH15QHPdvA==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -1060,10 +1060,10 @@ typedarray@^0.0.6:
   resolved "http://npm.dui88.com:80/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.4.2:
-  version "4.4.2"
-  resolved "http://npm.dui88.com:80/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
-  integrity sha1-bWGGQNQw41aaHftE99fmAM7T7oY=
+typescript@^4.5.4:
+  version "4.5.4"
+  resolved "http://npm.dui88.com:80/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
 
 util-deprecate@~1.0.1:
   version "1.0.2"

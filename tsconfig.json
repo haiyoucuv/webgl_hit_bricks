@@ -1,29 +1,27 @@
 {
-    "compilerOptions": {
-        // "skipLibCheck": true,
-        "module": "ESNext",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false,
-        "noEmitOnError": true,
-        "noUnusedLocals": false,
-        "allowJs": true,
-        "moduleResolution": "Node",
-        "lib": [
-            "es5",
-            "es2015.promise",
-            "dom"
-        ],
-        "declaration": true,
-        "declarationDir": "./build/types",
-      "allowSyntheticDefaultImports": true
-    },
-    "exclude": [
-        "node_modules",
-        "types"
+  "compilerOptions": {
+    // "skipLibCheck": true,
+    "module": "ESNext",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "lib": [
+      "es5",
+      "es2015.promise",
+      "dom"
     ],
-    "include": [
-        "./src",
-        "./outer"
-    ]
+    "declaration": true,
+    "declarationDir": "./build/types",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src",
+    "types"
+  ]
 }

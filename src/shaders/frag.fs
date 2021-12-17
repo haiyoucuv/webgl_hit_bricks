@@ -5,8 +5,6 @@ uniform sampler2D u_dissolve;
 
 uniform float u_dissolveThreshold;
 
-uniform vec3 u_color;
-
 varying vec3 v_pos;
 varying vec2 v_uv;
 

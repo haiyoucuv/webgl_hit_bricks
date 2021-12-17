@@ -15,38 +15,34 @@ import serve from "rollup-plugin-serve";
 import glslify from 'rollup-plugin-glslify';
 import {default as glslOptimize} from 'rollup-plugin-glsl-optimize';
 
-console.log(glslOptimize);
-
-export default [
-	{
-		input: "src/index.ts",
-		output: {
-			file: "build/q3.js",
-			format: "umd",
-			sourcemap: true,
-			name: "q3",
-		},
-		plugins: [
-			progress(),
-			replace({
-				ENV: JSON.stringify(process.env.NODE_ENV || 'prod'),
-			}),
-			resolve({ preferBuiltins: true }),
-			typescript({ sourceMap: true }),
-			commonjs(),
-			json(),
-			// glslify(),
-			glslOptimize({
-				optimize: false,
-				glslify: true,
-			}),
-			serve({
-				port: 8081,
-				headers: {
-					'Access-Control-Allow-Origin': '*'
-				},
-			}),
-			livereload(),
-		]
+export default {
+	input: "src/index.ts",
+	output: {
+		file: "build/q3.js",
+		format: "umd",
+		sourcemap: true,
+		name: "q3",
 	},
-];
+	plugins: [
+		progress(),
+		replace({
+			ENV: JSON.stringify(process.env.NODE_ENV || 'prod'),
+		}),
+		// resolve(),
+		typescript({ sourceMap: true }),
+		commonjs(),
+		json(),
+		// glslify(),
+		glslOptimize({
+			optimize: false,
+			glslify: true,
+		}),
+		serve({
+			port: 8081,
+			headers: {
+				'Access-Control-Allow-Origin': '*'
+			},
+		}),
+		livereload(),
+	]
+};

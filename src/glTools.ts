@@ -5,6 +5,36 @@
  */
 
 
+/**
+ * 初始化一个gl程序
+ * @param {WebGLRenderingContext} gl
+ * @param {string} vs
+ * @param {string} fs
+ * @return {WebGLProgram}
+ */
+export function initProgram(gl: WebGLRenderingContext, vs: string, fs: string) {
+    const vsShader = createShader(gl, gl.VERTEX_SHADER, vs);
+    const fsShader = createShader(gl, gl.FRAGMENT_SHADER, fs);
+
+    if (!(vsShader && fsShader)) {
+        throw "创建shader程序失败";
+    }
+
+    const program = createProgram(gl, vsShader, fsShader);
+    if (!program) {
+        throw "链接着色器程序失败";
+    }
+    return program;
+
+}
+
+/**
+ * 创建shader程序
+ * @param {WebGLRenderingContext} gl
+ * @param {GLenum} type
+ * @param {string} source
+ * @return {WebGLShader | null}
+ */
 export function createShader(gl: WebGLRenderingContext, type: GLenum, source: string) {
     const shader = gl.createShader(type);
     gl.shaderSource(shader, source);
@@ -21,7 +51,14 @@ export function createShader(gl: WebGLRenderingContext, type: GLenum, source: st
     return shader;
 }
 
-export function createProgram(gl: WebGLRenderingContext, vertexShader, fragShader) {
+/**
+ * 链接着色器程序
+ * @param {WebGLRenderingContext} gl
+ * @param {WebGLShader} vertexShader
+ * @param {WebGLShader} fragShader
+ * @return {WebGLProgram}
+ */
+export function createProgram(gl: WebGLRenderingContext, vertexShader: WebGLShader, fragShader: WebGLShader): WebGLProgram {
 
     const program = gl.createProgram();
     gl.attachShader(program, vertexShader);
@@ -39,6 +76,11 @@ export function createProgram(gl: WebGLRenderingContext, vertexShader, fragShade
     return program;
 }
 
+/**
+ * 加载图片
+ * @param {string} src
+ * @return {Promise<HTMLImageElement>}
+ */
 export async function loadImage(src: string): Promise<HTMLImageElement> {
     return new Promise((resolve) => {
         const image = new Image();
@@ -48,7 +90,14 @@ export async function loadImage(src: string): Promise<HTMLImageElement> {
     });
 }
 
-export function createTexture(gl: WebGLRenderingContext, image: TexImageSource, textureCancel: number = 0) {
+
+/**
+ * 创建webgl贴图
+ * @param {WebGLRenderingContext} gl
+ * @param {TexImageSource} image
+ * @return {WebGLTexture}
+ */
+export function createTexture(gl: WebGLRenderingContext, image: TexImageSource): WebGLTexture {
     const texture = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, texture);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
