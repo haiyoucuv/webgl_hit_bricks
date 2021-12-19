@@ -5,7 +5,6 @@ uniform sampler2D u_dissolve;
 
 uniform float u_dissolveThreshold;
 
-varying vec3 v_pos;
 varying vec2 v_uv;
 
 void main () {
@@ -23,6 +22,4 @@ void main () {
     }
 
     gl_FragColor = color;
-    //    gl_FragColor = texture2D(u_texture, v_uv);
-    //    gl_FragColor = vec4(vec3(noise(v_pos*25.0)), 1);
 }

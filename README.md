@@ -1,4 +1,4 @@
 
-# SDK
+# webgl_hit_bricks
 
-兑吧营销活动前端监控C端sdk
+webgl_hit_bricks

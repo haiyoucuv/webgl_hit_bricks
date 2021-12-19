@@ -5,6 +5,7 @@
  */
 
 import { initProgram } from "../glTools";
+import Attribute from "./Attribute";
 import { extractAttributes, extractUniforms } from "./extractInputs";
 import { generateUniformAccessObject } from "./generateUniformAccessObject";
 
@@ -28,7 +29,7 @@ export default class Shader {
 		return this._program;
 	}
 
-	private _attributes;
+	private _attributes: { [key in string]: Attribute };
 	get attributes() {
 		return this._attributes;
 	}
@@ -43,8 +44,6 @@ export default class Shader {
 		this.fs = fs;
 
 		this._program = initProgram(gl, vs, fs);
-
-		console.log(extractAttributes(gl, this._program));
 
 		this._attributes = extractAttributes(gl, this.program);
 
